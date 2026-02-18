@@ -11,6 +11,10 @@ const createJestConfig = nextJest({
 const jestConfig = createJestConfig({
   moduleDirectories: ["node_modules", "<rootDir>"],
   testTimeout: 60000,
+  testPathIgnorePatterns: [
+    "<rootDir>/.features-gen/",
+    "<rootDir>/node_modules/",
+  ],
 });
 
 module.exports = jestConfig;
